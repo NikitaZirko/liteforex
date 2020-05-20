@@ -10,7 +10,7 @@ module.exports = {
       { hid: 'description', name: 'Тестовое задание', content: 'Тестовое задание' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
         href:
