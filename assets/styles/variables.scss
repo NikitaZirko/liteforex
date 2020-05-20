@@ -1,0 +1,15 @@
+// Mobile first
+$mediaMobile: 400px;
+$mediaTablet: 960px;
+$mediaLaptop: 961px;
+
+// Typography
+$primary-font: 'Roboto', sans-serif;
+$primary-color: #007FD8;
+
+// Mixins
+@mixin flex-center () {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
