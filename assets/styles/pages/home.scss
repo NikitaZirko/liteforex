@@ -22,8 +22,7 @@
 
 .social-trading {
   .social-trading-img {
-    display: block;
-    margin: 0 auto;
+    @include center();
   }
   .social-trading-text {
     @include wrap();
@@ -37,10 +36,9 @@
     }
   }
   .social-trading-btn {
-    display: block;
+    @include center();
     height: 60px;
     width: 200px;
-    margin: 0 auto;
     box-shadow: none;
     font-weight: 500;
     font-size: 1.8rem;
@@ -50,3 +48,58 @@
   }
 }
 
+.profit-title {
+  @include wrap();
+  color: black;
+  font-weight: bold;
+  font-size: 7.0rem !important;
+  line-height: 8.4rem;
+  & > span {
+    color: #707070;
+  }
+}
+
+.investor {
+  width: 100%;
+  height: 1086px;
+  margin: 100px 0 200px;
+  background: #EEEEEE;
+  position: relative;
+  .investor__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .investor__text {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: #707070;
+    & > span {
+      font-weight: 500;
+    }
+  }
+}
+.percent-profit {
+  .percent-profit-img {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #444444;
+    border-radius: 8px;
+  }
+  .percent-profit-text {
+    @include wrap();
+    padding: 120px 0 100px;
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 4.3rem;
+    color: #707070;
+    & > span {
+      color: black;
+    }
+  }
+}

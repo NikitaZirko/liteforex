@@ -1,2 +1,93 @@
 @import "@/assets/styles/variables";
 
+.profit {
+  @include wrap();
+  padding: 200px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .profit__col {
+    display: block;
+    position: relative;
+    height: 485px;
+    width: 300px;
+    & > h3 {
+      font-weight: bold;
+      font-size: 2.4rem;
+      line-height: 3.4rem;
+    }
+    & > p {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      color: #333333;
+    }
+  }
+}
+
+.graph {
+  width: 338px;
+  border: 1px solid #DFE3EA;
+  .graph__media {
+    position: relative;
+    padding: 15px;
+    .user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .user-name {
+        padding-top: 15px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        color: #3B4B68;
+      }
+    }
+    .graph__profit {
+      padding-top: 20px;
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      color: #70787D;
+      & > span {
+        font-weight: 500;
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+        color: #47BF6F;
+      }
+    }
+  }
+  .graph__curve {
+    position: absolute;
+    bottom: 70px;
+  }
+  .graph__info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    background: #EBEEF1;
+    .info__data {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      & > p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        color: #70787D;
+        & > span {
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+          color: #3B4B68;
+        }
+      }
+    }
+  }
+}
+
+hr {
+  margin: 20px 0;
+}

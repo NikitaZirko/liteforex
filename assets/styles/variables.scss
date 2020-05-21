@@ -9,11 +9,16 @@ $primary-color: #007FD8;
 
 // Mixins
 @mixin wrap () {
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
 @mixin center () {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin flex-center () {
   display: flex;
   align-items: center;
   justify-content: center;
