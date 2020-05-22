@@ -6,7 +6,10 @@
       h1.title.header__title Лучший сервис инвестиций.
 
     .social-trading
-      img.social-trading-img(src="@/assets/img/main_pic.png" alt="liteforex panel")
+      .open-note
+        .open-note-in(v-scroll="openNote")
+          img.note-top(src="@/assets/img/main_pic_1.png" alt="liteforex panel")
+      img.note-bottom(src="@/assets/img/main_pic_2.png" alt="liteforex panel")
       p.social-trading-text <span>Social trading</span> создан для тех кто ищет максимальную прибыль и минимальный риск. Богатый выбор управляющих, и невероятный контроль над инвестициями и возможность общения с трейдерами. Инновационная платформа для начинающих и профессиональных инвесторов.
       v-btn.social-trading-btn(rounded) Регистрация
 
@@ -34,10 +37,32 @@
 <script>
 import Profit from "@/components/Profit";
 import User from "@/components/User";
+
 export default {
   components: {
     "component-profit": Profit,
     "component-user-profile": User
+  },
+  methods: {
+    openNote: function (evt, el) {
+      if (window.scrollY < 50) {
+        el.setAttribute(
+          'style',
+          `transform: rotateX(-${5}deg);`
+        )
+      } else if (window.scrollY > 300) {
+        el.setAttribute(
+          'style',
+          `transform: rotateX(-${0}deg);`
+        )
+      } else if (window.scrollY > 100) {
+        el.setAttribute(
+          'style',
+          `transform: rotateX(-${4.5}deg);`
+        )
+      }
+      //return window.scrollY > 1000 // limit for destroeyd
+    }
   }
 };
 </script>

@@ -21,7 +21,22 @@
 }
 
 .social-trading {
-  .social-trading-img {
+  .open-note {
+    perspective: 1000px;
+    perspective-origin: center -400%;
+    .open-note-in {
+      transform-style: preserve-3d;
+      transition: transform .8s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform-origin: bottom;
+      transform: rotateX(-14deg);
+      .note-top{
+        @include center();
+      }
+    }
+  }
+  .note-bottom{
     @include center();
   }
   .social-trading-text {

@@ -29,6 +29,12 @@ module.exports = {
     '@/assets/styles/global.css'
   ],
   /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+    '@/plugins/scroll.js'
+  ],
+  /*
   ** Nuxt.js modules
   */
   modules: [
