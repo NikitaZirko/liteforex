@@ -45,20 +45,16 @@ export default {
   },
   methods: {
     openNote: function (evt, el) {
-      /* if (window.scrollY < 50) {
-        el.setAttribute(
-          'style',
-          `transform: rotateX(-${5}deg);`
+      console.log(evt)
+      console.log(el)
+      if (window.scrollY < 50) {
+        el.setAttribute('style', `transform: rotateX(-${5}deg);`
         )
-      } else */ if (window.scrollY > 300) {
-        el.setAttribute(
-          'style',
-          `transform: rotateX(-${0}deg);`
+      } else if (window.scrollY > 300) {
+        el.setAttribute('style', `transform: rotateX(-${0}deg);`
         )
       } else if (window.scrollY > 100) {
-        el.setAttribute(
-          'style',
-          `transform: rotateX(-${4.5}deg);`
+        el.setAttribute('style', `transform: rotateX(-${4.5}deg);`
         )
       }
       //return window.scrollY > 1000 // limit for destroeyd
