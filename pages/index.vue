@@ -45,12 +45,12 @@ export default {
   },
   methods: {
     openNote: function (evt, el) {
-      if (window.scrollY < 50) {
+      /* if (window.scrollY < 50) {
         el.setAttribute(
           'style',
           `transform: rotateX(-${5}deg);`
         )
-      } else if (window.scrollY > 300) {
+      } else */ if (window.scrollY > 300) {
         el.setAttribute(
           'style',
           `transform: rotateX(-${0}deg);`
