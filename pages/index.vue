@@ -7,7 +7,7 @@
 
     .social-trading
       .open-note
-        .open-note-in(v-scroll="openNote")
+        .open-note-in(v-scroll="openNote" ref="el")
           img.note-top(src="@/assets/img/main_pic_1.png" alt="liteforex panel")
       img.note-bottom(src="@/assets/img/main_pic_2.png" alt="liteforex panel")
       p.social-trading-text <span>Social trading</span> создан для тех кто ищет максимальную прибыль и минимальный риск. Богатый выбор управляющих, и невероятный контроль над инвестициями и возможность общения с трейдерами. Инновационная платформа для начинающих и профессиональных инвесторов.
@@ -44,17 +44,16 @@ export default {
     "component-user-profile": User
   },
   methods: {
-    openNote: function (evt, el) {
-      console.log(evt)
-      console.log(el)
+    openNote: function (evt) {
+
       if (window.scrollY < 50) {
-        el.setAttribute('style', `transform: rotateX(-${5}deg);`
+        this.$refs.el.setAttribute('style', `transform: rotateX(-${5}deg);`
         )
       } else if (window.scrollY > 300) {
-        el.setAttribute('style', `transform: rotateX(-${0}deg);`
+        this.$refs.el.setAttribute('style', `transform: rotateX(-${0}deg);`
         )
       } else if (window.scrollY > 100) {
-        el.setAttribute('style', `transform: rotateX(-${4.5}deg);`
+        this.$refs.el.setAttribute('style', `transform: rotateX(-${4.5}deg);`
         )
       }
       //return window.scrollY > 1000 // limit for destroeyd
