@@ -9,9 +9,9 @@
       .open-note
         .open-note-in(v-scroll="openNote" ref="el")
           img.note-top(src="@/assets/img/main_pic_1.png" alt="liteforex panel")
-      img.note-bottom(src="@/assets/img/main_pic_2.png" alt="liteforex panel")
-      p.social-trading-text <span>Social trading</span> создан для тех кто ищет максимальную прибыль и минимальный риск. Богатый выбор управляющих, и невероятный контроль над инвестициями и возможность общения с трейдерами. Инновационная платформа для начинающих и профессиональных инвесторов.
-      v-btn.social-trading-btn(rounded) Регистрация
+        img.note-bottom(src="@/assets/img/main_pic_2.png" alt="liteforex panel")
+        p.social-trading-text <span>Social trading</span> создан для тех кто ищет максимальную прибыль и минимальный риск. Богатый выбор управляющих, и невероятный контроль над инвестициями и возможность общения с трейдерами. Инновационная платформа для начинающих и профессиональных инвесторов.
+        v-btn.social-trading-btn(rounded) Регистрация
 
     component-profit
 
@@ -46,7 +46,7 @@ export default {
   methods: {
     openNote: function (evt) {
 
-      if (window.scrollY < 50) {
+      /* if (window.scrollY < 50) {
         this.$refs.el.setAttribute('style', `transform: rotateX(-${5}deg);`
         )
       } else if (window.scrollY > 300) {
@@ -56,7 +56,7 @@ export default {
         this.$refs.el.setAttribute('style', `transform: rotateX(-${4.5}deg);`
         )
       }
-      //return window.scrollY > 1000 // limit for destroeyd
+      //return window.scrollY > 1000 // limit for destroeyd */
     }
   }
 };

@@ -21,16 +21,19 @@
 }
 
 .social-trading {
+  height: 2000px;
   .open-note {
     perspective: 1000px;
     perspective-origin: center -400%;
+    position: sticky;
+    top: 0;
     .open-note-in {
       transform-style: preserve-3d;
       transition: transform .8s;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       transform-origin: bottom;
-      transform: rotateX(-14deg);
+      transform: rotateX(-4deg);
       .note-top{
         @include center();
       }
