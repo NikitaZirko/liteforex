@@ -2,12 +2,13 @@
   section.v-container
 
     .header
-      h2.title.header__sup-title LiteForex Social Trading
-      h1.title.header__title Лучший сервис инвестиций.
+      h2.title.header__sup-title(ref="header") LiteForex Social Trading
+      h1.title.header__title(ref="header") Лучший сервис инвестиций.
 
     .social-trading
       .open-note
         .open-note-in(v-scroll="openNote" ref="el")
+          img.note-top-panel(src="@/assets/img/panel-top.svg" alt="frame")
           img.note-top(src="@/assets/img/main_pic_1.png" alt="liteforex panel")
         img.note-bottom(src="@/assets/img/main_pic_2.png" alt="liteforex panel")
         p.social-trading-text <span>Social trading</span> создан для тех кто ищет максимальную прибыль и минимальный риск. Богатый выбор управляющих, и невероятный контроль над инвестициями и возможность общения с трейдерами. Инновационная платформа для начинающих и профессиональных инвесторов.
@@ -45,18 +46,24 @@ export default {
   },
   methods: {
     openNote: function (evt) {
-
-      /* if (window.scrollY < 50) {
-        this.$refs.el.setAttribute('style', `transform: rotateX(-${5}deg);`
+      if (window.scrollY < 50) {
+        this.$refs.header.setAttribute('style', `color: black;`)
+      } else if (window.scrollY < 250) {
+        this.$refs.header.setAttribute('style', `color: lightgray;`)
+        this.$refs.el.setAttribute('style', `transform: rotateX(-${9}deg);`
         )
-      } else if (window.scrollY > 300) {
+      } else if (window.scrollY > 700) {
         this.$refs.el.setAttribute('style', `transform: rotateX(-${0}deg);`
         )
-      } else if (window.scrollY > 100) {
+      } else if (window.scrollY < 700) {
+        this.$refs.el.setAttribute('style', `transform: rotateX(-${6}deg);`
+        )
+      } else if (window.scrollY < 500) {
         this.$refs.el.setAttribute('style', `transform: rotateX(-${4.5}deg);`
         )
       }
-      //return window.scrollY > 1000 // limit for destroeyd */
+
+      //return window.scrollY > 1000 // limit for destroeyd
     }
   }
 };
