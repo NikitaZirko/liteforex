@@ -1,4 +1,4 @@
-# physicon
+# liteforex
 
 > Nuxt.js project
 
