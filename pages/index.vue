@@ -46,23 +46,16 @@ export default {
   },
   methods: {
     openNote: function (evt) {
-      if (window.scrollY < 50) {
+      if (window.scrollY < 100) {
+        console.log("1")
         this.$refs.header.setAttribute('style', `color: black;`)
-      } else if (window.scrollY < 250) {
+        this.$refs.el.setAttribute('style', `transform: rotateX(-${9.5}deg) !important;`)
+      } else if (window.scrollY > 100) {
+        console.log("2")
         this.$refs.header.setAttribute('style', `color: lightgray;`)
-        this.$refs.el.setAttribute('style', `transform: rotateX(-${9}deg);`
-        )
-      } else if (window.scrollY > 700) {
-        this.$refs.el.setAttribute('style', `transform: rotateX(-${0}deg);`
-        )
-      } else if (window.scrollY < 700) {
-        this.$refs.el.setAttribute('style', `transform: rotateX(-${6}deg);`
-        )
-      } else if (window.scrollY < 500) {
-        this.$refs.el.setAttribute('style', `transform: rotateX(-${4.5}deg);`
+        this.$refs.el.setAttribute('style', `transform: rotateX(${0}deg);`
         )
       }
-
       //return window.scrollY > 1000 // limit for destroeyd
     }
   }

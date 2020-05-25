@@ -23,7 +23,7 @@
 }
 
 .social-trading {
-  height: 1500px;
+  height: 1200px;
   .open-note {
     position: sticky;
     top: 80%;
@@ -34,7 +34,7 @@
       position: relative;
       backface-visibility: hidden;
       transform-style: preserve-3d;
-      transition: transform 1s;
+      transition: transform 0.7s;
       transform-origin: bottom;
       transform: rotateX(-9.5deg);
       .note-top-panel, .note-top {
